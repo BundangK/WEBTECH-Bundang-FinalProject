@@ -1,0 +1,229 @@
+/* General Contact Styles */
+.contact {
+  padding: 40px 10px;
+  background-color: #E6E6FA;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.contact-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box:nth-child(2) {
+  background-color: #f9f9f9;
+}
+
+.contact-box:nth-child(3) {
+  background-color: #e3f2fd; /* Light blue */
+}
+
+.contact-box:nth-child(4) {
+  background-color: #FAFAFF; /* Light yellow-green */
+}
+
+.contact-box h1,
+.contact-box h2 {
+  color: #007AC1; /* Thunder Blue */
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-box p,
+.contact-box label,
+.contact-box textarea {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.contact-box a {
+  color: #007AC1;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Methods Styling */
+.contact-methods {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.social-logo {
+  width: 20px;  /* Adjust the size as needed */
+  height: auto;
+  vertical-align: middle;  /* Align the logo with the text */
+}
+
+
+
+.contact-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px; /* Fixed width for consistent sizing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text inside each box */
+}
+
+.contact-item h3 {
+  color: #007AC1; /* Thunder Blue */
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Topics of Interest Styling */
+.topics-box {
+  background-color: #f9f9f9;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack form elements */
+  gap: 15px; /* Space between form elements */
+}
+
+form label {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Vertically center align items */
+  margin-bottom: 10px; /* Spacing between form groups */
+}
+
+form label span {
+  width: 120px; /* Set a fixed width for labels */
+  font-size: 1.2em;
+  display: inline-block; /* Makes sure labels have the same width */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  flex: 1; /* Allows input to take the remaining space */
+  width: calc(100% - 140px); /* Adjust width to accommodate label width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: vertical; /* Allows only vertical resizing */
+}
+
+form button {
+  background-color: #007AC1; /* Thunder Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 40px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+fieldset label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Print Styles */
+@media print {
+  /* Hide everything that is not essential for printing */
+  body * {
+    visibility: hidden; /* Hide all elements */
+  }
+
+  /* Show the main content area */
+  .contact,
+  .contact * {
+    visibility: visible; /* Show only the contact section and its contents */
+  }
+
+  /* Hide links and email addresses */
+  a {
+    display: none; /* Hide all links */
+  }
+
+  /* Replace email addresses with text */
+  .contact-item p {
+    display: block; /* Ensure paragraphs are displayed */
+    content: "Stay connected! Email me for delicious high-protein recipes, fitness tips, and the latest updates."; /* Replace email link with text */
+  }
+
+  /* Remove email addresses from the original HTML */
+  .contact-item p:last-child {
+    display: none; /* Hide actual email address */
+  }
+
+  /* Style for print */
+  .contact {
+    position: absolute; /* Position the contact section for printing */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ensure it uses full width */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+
+  /* Remove background colors and borders */
+  .contact-box {
+    border: none; /* Remove borders */
+    background: none; /* Remove background */
+  }
+
+  /* Adjust headings */
+  h1, h2, h3 {
+    color: black; /* Ensure text is printed in black */
+    margin: 0; /* Remove margins */
+  }
+
+  /* Style for form fields */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px solid #000; /* Add a solid border for print */
+    width: 100%; /* Ensure input fields take full width */
+    box-shadow: none; /* Remove shadows */
+  }
+
+  /* Hide buttons */
+  button {
+    display: none; /* Hide buttons in print */
+  }
+
+  /* Optional: Adjust paragraph text for better readability */
+  p {
+    margin: 0 0 10px; /* Add margin between paragraphs */
+  }
+}

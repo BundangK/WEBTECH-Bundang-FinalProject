@@ -1,0 +1,162 @@
+/* About Me Section */
+.about-me {
+    padding: 40px 10px;
+    background-color: #fdfdfd;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid #007AC1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make the container flex */
+    justify-content: space-between; /* Space between elements */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    text-align: left; /* Align text to the left */
+}
+
+.profile {
+    flex: 1; /* Allow the profile section to take up available space */
+    margin-bottom: 40px;
+    text-align: center; /* Center align for small screens */
+}
+
+.profile-img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 3px solid #007AC1; /* Border to make the profile picture stand out */
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #555;
+}
+
+.sidebar {
+    flex: 1; /* Allow the sidebar to take up the remaining space */
+    padding: 20px;
+    margin-left: 25px; /* Space between profile and sidebar */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #FEF9D9;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #007AC1;
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.bio, .philosophy, .call-to-action {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #FFF8E8;
+}
+
+.bio h2, .philosophy h2, .call-to-action h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #007AC1;
+}
+
+.bio p, .philosophy p, .call-to-action p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.call-to-action a {
+    color: #007AC1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.call-to-action a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #007AC1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/*Printing*/
+
+@media print {
+    /* Hide unnecessary sections */
+    nav, .sidebar, #footer, #footer_main {
+        display: none;
+    }
+
+    /* Ensure the main content is fully visible */
+    body, .about-me, .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile, .bio, .philosophy, .call-to-action {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Remove any background colors, borders, and shadows */
+    * {
+        background: none !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Adjust image size for printing */
+    img.profile-img {
+        max-width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust fonts for print */
+    h1, h2 {
+        font-size: 18pt;
+    }
+
+    p {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    /* Ensure links display URLs */
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+}
